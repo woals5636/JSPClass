@@ -37,10 +37,9 @@
                             
   </xmp>
   
-  정수 : <input type="text" id="num"
-  			value="<%if(num==0){}%><%else {%><%= num%><%}%>"
-  		>
-  		<br>
+  <%-- 정수 : <input type="text" id="num" value="<%if(num==0){}%><%else {%><%= num%><%}%>"><br> --%>
+  정수 : <input type="text" id="num"><br>
+  
   <p id="demo">
   		<%
 	  	if( pNum != null && !pNum.equals("") ){
@@ -61,13 +60,30 @@
 $("#num").select();
 $("#num")
 .css("text-align","center")
+<%-- .val('<%= pNum %>') --%>
+.val('${param.num}')
 .on({
 	"keydown":function(e){
-		 if ( !(e.which >= 48 && e.which <= 57
-	              || e.which == 8
-	              || e.which == 13
-	              || e.which == 229
+		 if ( !(
+				 (event.keyCode >= 48 && event.keyCode <= 57) || // 숫자키 (상단)
+				 (event.keyCode >= 96 && event.keyCode <= 105) || // 숫자키패드
+				 event.keyCode === 8 ||  // Backspace
+				 event.keyCode === 9 ||  // Tab
+				 event.keyCode === 13 || // Enter
+				 event.keyCode === 37 || // 왼쪽 화살표
+				 event.keyCode === 39 || // 오른쪽 화살표
+				 event.keyCode === 46    // Delete
+				 
+				/*  // event.key로 사용하는 방법
+			    (event.key >= '0' && event.key <= '9') ||  // 숫자 키 (상단과 숫자 패드 동일)
+			    event.key === "Backspace" || 
+			    event.key === "Tab" ||
+			    event.key === "Enter" ||
+			    event.key === "ArrowLeft" ||
+			    event.key === "ArrowRight" ||
+			    event.key === "Delete" */
 	          )){
+			    
 			 alert("숫자만 입력하세요.");
 			 e.preventDefault();
 		 }

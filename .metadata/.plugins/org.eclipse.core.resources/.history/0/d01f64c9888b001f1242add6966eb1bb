@@ -1,0 +1,8 @@
+package days02;
+
+import javax.servlet.http.HttpServlet;
+
+// 서블릿 규약을 따르는 서블릿 클래스 선언
+public class Now extends HttpServlet{
+
+}
