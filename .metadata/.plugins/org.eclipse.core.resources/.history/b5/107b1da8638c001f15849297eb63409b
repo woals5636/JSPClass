@@ -192,7 +192,7 @@
   	 			evo=eir.next();
   	 %>
   	 	<tr>
-  	 	 <td><input type="checkbox" data-empno="<%= evo.getEmpno() %>" name="ckb_" id="ckb_"></td>
+  	 	 <td><input type="checkbox" data-empno="<%= evo.getEmpno() %>" id="ckb_<%= evo.getEmpno() %>" name="ckb_<%= evo.getEmpno() %>"/></td>
   	 	 <td><%= evo.getEmpno() %></td>
   	 	 <td><%= evo.getEname() %></td>
   	 	 <td><%= evo.getJob() %></td>
@@ -265,25 +265,13 @@
 
 // 두 번째 풀이
     $("tfoot button").on("click",function(event){
-        // ?empno=1111&empno=2222...
         let empnos = [];
-        $("tbody :checkbox :checked").each(function(index, element){  
-			// jquery method : data() data-이름
-			let empno = $(element).data("empno");
-			empnos.push(empno);
-		})
-		location.href = `ex01_ok.jsp?empno=\${empnos.join("&empno=")}`;
-	}
-    $("tfoot button").on("click",function(event){
-        // ?empno=1111&empno=2222...
-        let empnos = [];
-        $("tbody :checkbox :checked").each(function(index, element){  
-           // jq 메서드 : data()   
-            let empno = $(element).data("empno");
+        $("tbody :checkbox:checked").each(function(index, element){  
+           // jq 메서드 : data()
+    		let empno = $(element).data("empno");
             empnos.push(empno);
-         });
-         location.href = `ex01_ok.jsp?empno=${empnos.join("&empno=")}`;
+		})
+    	location.href = `ex01_ok.jsp?empno=\${ empnos.join("&empno=")}`;
      });
-
 </script>
 </html>

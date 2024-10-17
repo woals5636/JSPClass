@@ -192,7 +192,7 @@
   	 			evo=eir.next();
   	 %>
   	 	<tr>
-  	 	 <td><input type="checkbox" data-empno="<%= evo.getEmpno() %>" name="ckb_" id="ckb_"></td>
+  	 	 <td><input type="checkbox" data-empno="<%= evo.getEmpno() %>" id="ckb_<%= evo.getEmpno() %>" name="ckb_<%= evo.getEmpno() %>"/></td>
   	 	 <td><%= evo.getEmpno() %></td>
   	 	 <td><%= evo.getEname() %></td>
   	 	 <td><%= evo.getJob() %></td>
@@ -240,7 +240,7 @@
 	// 각 사원들의 체크박스를 클릭할 때 모두 선택 체크박스 처리
 	$("table tbody tr")
 	.find("td:first-child :checkbox").on("click",function(){
-		let ck = $("tbody :checkbox").length == $("tbody :checkbox:checked").length; 
+		let ck = $("tbody :checkbox").length == $("tbody :checkbox :checked").length; 
 		$("#ckbAll").prop("checked",ck);
 	})
 </script>
@@ -264,14 +264,14 @@
 */
 
 // 두 번째 풀이
-	$("tfoot button").on("click",function(event){
-		let empnos = [];
-        $("tbody :checkbox :checked").each(function(index, element){  
-			// jquery method : data() data-이름
-			let empno = $(element).data("empno");
-			empnos.push(empno);
+    $("tfoot button").on("click",function(event){
+        let empnos = [];
+        $("tbody :checkbox:checked").each(function(index, element){  
+           // jq 메서드 : data()
+    		let empno = $(element).data("empno");
+            empnos.push(empno);
 		})
-		location.href = `ex01_ok.jsp?empno=\${empnos.join("&empno=")}`;
-	}
+    	location.href = `ex01_ok.jsp?empno=\${ empnos.join("&empno=")}`;
+     });
 </script>
 </html>

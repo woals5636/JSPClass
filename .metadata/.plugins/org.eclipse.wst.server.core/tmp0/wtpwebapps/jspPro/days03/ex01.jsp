@@ -240,7 +240,7 @@
 	// 각 사원들의 체크박스를 클릭할 때 모두 선택 체크박스 처리
 	$("table tbody tr")
 	.find("td:first-child :checkbox").on("click",function(){
-		let ck = $("tbody :checkbox").length == $("tbody :checkbox :checked").length; 
+		let ck = $("tbody :checkbox").length == $("tbody :checkbox:checked").length; 
 		$("#ckbAll").prop("checked",ck);
 	})
 </script>
