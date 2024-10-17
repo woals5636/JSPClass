@@ -43,6 +43,7 @@
 		e.printStackTrace();
 	}finally{
 		try{
+			rs.close();
 			pstmt.close();
 			DBConn.close();
 		}catch(Exception e){
