@@ -1,0 +1,10 @@
+package days06;
+
+// 자바빈
+public class MemberInfo {
+	
+	private String id;
+	private String name;
+	private String passwd;
+	private String email;
+}

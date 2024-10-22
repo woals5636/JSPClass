@@ -25,6 +25,7 @@
   <ul>
     <li><a href="#">로그인</a></li>
     <li><a href="#">회원가입</a></li>
+    <li><a href="/jspPro/cstvsboard/list.htm">게시판</a></li>
   </ul>
 </header>
 <div>
@@ -70,7 +71,7 @@
          <c:forEach items="${ list }" var="dto">
            <tr>
              <td>${ dto.seq }</td>
-             <td><a href="<%= contextPath%>/cstvsboard/view.htm?seq=${ dto.seq }">${ dto.title }</a></td>
+             <td><a class="title" href="<%= contextPath%>/cstvsboard/view.htm?seq=${ dto.seq }">${ dto.title }</a></td>
              <td>${ dto.writer }</td>
              <td>${ dto.writedate }</td>
              <td>${ dto.readed }</td>
@@ -78,6 +79,12 @@
          </c:forEach>
        </c:otherwise>
      </c:choose>
+     <script>
+	     $("a.title").attr("href", function (index, oldHref){
+	        let npp = ${ pvo.numberPerPage };
+	        return `\${oldHref}&currentPage=${param.currentPage}&numberPerPage=\${npp}`;
+	     });
+   	</script>
    </tbody>
    <tfoot>
      <tr>
@@ -122,7 +129,7 @@
              <option value="w"> writer</option>
              <option value="tc">title+content</option>
            </select>
-           <input type="text" name="searchWord" id="searchWord" value="${ param.searchWord }"/>
+           <input type="text" name="searchWord" id="searchWord"/>
            <input type="submit" value="search" />     
            <%-- 
            <input type="hidden" name="numberPerPage"  value="${ pvo.numberPerPage }" />
@@ -145,7 +152,9 @@
   </script>
   <script>
      // 검색조건, 검색어 상태 유지
-     $("#searchCondition").val('${param.searchCondition}');
+     $("#searchCondition").val('${ empty param.searchCondition ? "t" : param.searchCondition}');
+     
+     $("#searchWord").val("${ param.searchWord }");
   </script>
 </div> 
 </body>

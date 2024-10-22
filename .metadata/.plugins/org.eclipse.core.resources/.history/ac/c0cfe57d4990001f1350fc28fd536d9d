@@ -1,0 +1,15 @@
+package days06;
+
+import lombok.Getter;
+import lombok.Setter;
+
+// 자바빈
+@Getter
+@Setter
+public class MemberInfo {
+	
+	private String id;
+	private String name;
+	private String passwd;
+	private String email;
+}

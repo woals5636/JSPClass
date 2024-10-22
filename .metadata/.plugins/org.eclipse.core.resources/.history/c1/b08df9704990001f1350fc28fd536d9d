@@ -1,0 +1,14 @@
+package days06;
+
+import javax.websocket.server.ServerEndpoint;
+
+// 자바빈
+@Getter
+@ServerEndpoint
+public class MemberInfo {
+	
+	private String id;
+	private String name;
+	private String passwd;
+	private String email;
+}
