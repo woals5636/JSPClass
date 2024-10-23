@@ -48,9 +48,8 @@
 </div> 
 <!-- BOTTOM 공통 모듈 -->
 <jsp:include page="/layout/bottom.jsp" flush="false">
-   <!-- 이렇게하면 사용할 수 있다. -->
-	<jsp:param value="contextPath" name="cp">
-</jsp:include> <!-- 서버에서 실행된다. -->
+    <jsp:param value="contextPath" name="cp"/>
+</jsp:include> 
 
 </body>
 </html>

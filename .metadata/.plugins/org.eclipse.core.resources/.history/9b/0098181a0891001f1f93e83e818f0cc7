@@ -1,0 +1,35 @@
+package days07;
+
+import java.io.IOException;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+@WebServlet("/days07/session.htm")
+public class ServletSession extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public ServletSession() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("> ServletSession.doGet()....");
+		/*
+		   1) HttpSession session request.getSession();
+		      == HttpSession session request.getSession(true);
+		      세션이 존재하면 존재하는 세션 객체를 반환하고
+		      존재하지 않으면 세션 객체를 새로 생성해서 반환
+		   2) HttpSession session request.getSession(boolean);
+		 */
+		
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
+	}
+
+}
