@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.util.DBConn;
 
@@ -37,6 +38,7 @@ public class List extends HttpServlet {
     // list.htm?currentPage=3
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("> List.doGet()...");
+
 		try {
 		  this.currentPage = Integer.parseInt(request.getParameter("currentPage"));
 		}catch(Exception e) {

@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="javax.servlet.RequestDispatcher"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="days04.board.persistence.BoardDAO"/>
-    <fullyQualifiedTypeName name="days04.board.persistence.BoardDAOImpl"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="days04.board.domain.BoardDTO"/>
     <fullyQualifiedTypeName name="com.util.DBConn"/>
@@ -23,7 +22,6 @@
     <fullyQualifiedTypeName name="lombok.Setter"/>
     <fullyQualifiedTypeName name="java.io.Serializable"/>
     <fullyQualifiedTypeName name="java.util.Date"/>
-    <fullyQualifiedTypeName name="java.sql.Connection"/>
     <fullyQualifiedTypeName name="javax.naming.Context"/>
     <fullyQualifiedTypeName name="javax.sql.DataSource"/>
     <fullyQualifiedTypeName name="javax.naming.NamingException"/>
@@ -32,4 +30,9 @@
     <fullyQualifiedTypeName name="days06.MemberInfo"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
     <fullyQualifiedTypeName name="days07.mvc.command.CommandHandler"/>
+    <fullyQualifiedTypeName name="days04.board.persistence.BoardDAOImpl"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="java.net.ConnectException"/>
+    <fullyQualifiedTypeName name="com.util.ConnectionProvider"/>
+    <fullyQualifiedTypeName name="javax.servlet.Filter"/>
 </qualifiedTypeNameHistroy>

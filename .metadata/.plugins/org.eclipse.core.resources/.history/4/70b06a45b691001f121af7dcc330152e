@@ -1,0 +1,13 @@
+package days08;
+
+public class FormatUtil {
+	// 인스턴스 메서드
+	public String number(long price, String pattern) {
+		
+	}
+	
+	// static 메서드
+	public static String statucNumber(long price, String pattern) {
+		
+	}
+}
