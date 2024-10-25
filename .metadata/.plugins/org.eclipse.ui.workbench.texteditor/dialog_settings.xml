@@ -20,6 +20,7 @@
 		<item key="wholeword" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="httpRequest "/>
 			<item value=")"/>
 			<item value="emno"/>
 			<item value="td"/>

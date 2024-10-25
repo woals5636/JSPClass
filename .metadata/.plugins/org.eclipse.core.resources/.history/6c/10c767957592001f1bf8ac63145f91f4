@@ -1,0 +1,21 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page trimDirectiveWhitespaces="true" %>
+<%
+	String id = request.getParameter("id");
+	String passwd = request.getParameter("pass");
+	
+	// DB 처리 : id, pwd 인증처리 + 권한	// admin 관리자 계정
+	session.setAttribute("auth", id);
+	
+	// 메인페이지로 이동
+	String location = "jspPro/days09/ex01.jsp";
+	
+	String referer = session.getAttribute("referer");
+	if(){
+		
+	} // if
+	
+	response.sendRedirect(location);
+
+%>

@@ -1,0 +1,19 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ page trimDirectiveWhitespaces="true" %>
+{
+   "emp":[
+            {"empno":7839,"ename":"KING"},
+            {"empno":7902,"ename":"FORD"},
+            {"empno":7566,"ename":"JONES"},
+            {"empno":7698,"ename":"BLAKE"},
+            {"empno":7782,"ename":"CLARK"},
+            {"empno":7499,"ename":"ALLEN"},
+            {"empno":7844,"ename":"TURNER"},
+            {"empno":7934,"ename":"MILLER"},
+            {"empno":7654,"ename":"MARTIN"},
+            {"empno":7521,"ename":"WARD"},
+            {"empno":7900,"ename":"JAMES"},
+            {"empno":7369,"ename":"SMITH"}
+         ]
+}
