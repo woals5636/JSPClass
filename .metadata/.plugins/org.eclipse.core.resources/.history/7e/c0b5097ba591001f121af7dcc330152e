@@ -1,5 +1,0 @@
-package days07.mvc.command;
-
-public class ViewHandler implements CommandHandler{
-
-}

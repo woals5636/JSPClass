@@ -28,7 +28,19 @@
 </header>
 <div>
   <xmp class="code">
-                           
+	  [파일업로드]
+	      1. [업로드]    :   클 -> 서
+	         다운로드  :   서 -> 클
+	      2. 쇼핑사이트 : 상품 정보 등록
+	         자료실 : 첨부파일 등록
+	         회원가입 : 회원이미지 등록
+	         등등  
+	                 
+	      3. (꼭 기억) 실제 파일 업로드 할 때 
+	        1) 스트림 기반의 전송 방식인 form method="post" 설정.
+	        2) 인코딩 설정
+	           기본 :   enctype="application/x-www-form-urlencoded"  
+	                    enctype="multipart/form-data"   철자
   </xmp>
   <a href="ex01_02.jsp?lat=37.499294&lng=127.0331883">(주)쌍용교육센터</a>
   <br>

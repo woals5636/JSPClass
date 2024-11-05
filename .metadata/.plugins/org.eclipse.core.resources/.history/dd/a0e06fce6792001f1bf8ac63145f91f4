@@ -1,6 +1,0 @@
-package days09;
-
-// 인증 정보를 저장할 객체
-public class AuthInfo {
-
-}
